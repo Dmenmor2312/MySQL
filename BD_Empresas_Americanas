@@ -1,4 +1,4 @@
-CREATE TABLE companies (
+CREATE TABLE companies ( //Modificado por Fernando 1º DAW Y
     Company VARCHAR(255),
     Valuation DECIMAL(10, 2),
     Date_Added DATE,
