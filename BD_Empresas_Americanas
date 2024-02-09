@@ -1,4 +1,4 @@
-CREATE TABLE companies (
+CREATE TABLE companies ( //Hola soy Fernando
     Company VARCHAR(255),
     Valuation DECIMAL(10, 2),
     Date_Added DATE,
