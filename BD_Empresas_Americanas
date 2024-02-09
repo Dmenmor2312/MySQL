@@ -1,12 +1,20 @@
-Company	Valuation ($B)	Date Added	Country	Category	Select Investors
-0	Bytedance	$140.00	4/7/17	China	Artificial intelligence	Sequoia Capital China, SIG Asia Investments, S...
-1	SpaceX	$100.30	12/1/12	United States	Other	Founders Fund, Draper Fisher Jurvetson, Rothen...
-2	Stripe	$95.00	1/23/14	United States	Fintech	Khosla Ventures, LowercaseCapital, capitalG
-3	Klarna	$45.60	12/12/11	Sweden	Fintech	Institutional Venture Partners, Sequoia Capita...
-4	Canva	$40.00	1/8/18	Australia	Internet software & services	Sequoia Capital China, Blackbird Ventures, Mat...
-...	...	...	...	...	...	...
-912	Heyday	$1.00	11/16/21	United States	E-commerce & direct-to-consumer	Khosla Ventures,General Catalyst, Victory Park...
-913	PLACE	$1.00	11/17/21	United States	Internet software & services	Goldman Sachs Asset Management, 3L
-914	Stytch	$1.00	11/18/21	United States	Cybersecurity	Index Ventures, Benchmark, Thrive Capital
-915	Owkin	$1.00	11/18/21	United States	Artificial Intelligence	Google Ventures, Cathay Innovation, NJF Capital
-916	Expel	$1.00	11/18/21	United States	Cybersecurity	Paladin Capital Group, Greycroft, Scale Ventur...
+CREATE TABLE companies (
+    Company VARCHAR(255),
+    Valuation DECIMAL(10, 2),
+    Date_Added DATE,
+    Country VARCHAR(255),
+    Category VARCHAR(255),
+    Select_Investors TEXT
+);
+
+INSERT INTO companies (Company, Valuation, Date_Added, Country, Category, Select_Investors) VALUES
+('Bytedance', 140.00, '2017-04-07', 'China', 'Artificial intelligence', 'Sequoia Capital China, SIG Asia Investments, S...'),
+('SpaceX', 100.30, '2012-12-01', 'United States', 'Other', 'Founders Fund, Draper Fisher Jurvetson, Rothen...'),
+('Stripe', 95.00, '2014-01-23', 'United States', 'Fintech', 'Khosla Ventures, LowercaseCapital, capitalG'),
+('Klarna', 45.60, '2011-12-12', 'Sweden', 'Fintech', 'Institutional Venture Partners, Sequoia Capita...'),
+('Canva', 40.00, '2018-01-08', 'Australia', 'Internet software & services', 'Sequoia Capital China, Blackbird Ventures, Mat...'),
+('Heyday', 1.00, '2021-11-16', 'United States', 'E-commerce & direct-to-consumer', 'Khosla Ventures,General Catalyst, Victory Park...'),
+('PLACE', 1.00, '2021-11-17', 'United States', 'Internet software & services', 'Goldman Sachs Asset Management, 3L'),
+('Stytch', 1.00, '2021-11-18', 'United States', 'Cybersecurity', 'Index Ventures, Benchmark, Thrive Capital'),
+('Owkin', 1.00, '2021-11-18', 'United States', 'Artificial Intelligence', 'Google Ventures, Cathay Innovation, NJF Capital'),
+('Expel', 1.00, '2021-11-18', 'United States', 'Cybersecurity', 'Paladin Capital Group, Greycroft, Scale Ventur...');
