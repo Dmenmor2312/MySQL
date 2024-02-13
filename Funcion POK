@@ -1,0 +1,20 @@
+DELIMITER //
+
+CREATE FUNCTION encontrar_pokemon_mas_pesado(region_pokemon VARCHAR(255))
+RETURNS VARCHAR(255)
+BEGIN
+    DECLARE nombre_pokemon VARCHAR(255);
+    DECLARE peso_maximo DECIMAL(5,2);
+    
+    SELECT NombrePOK INTO nombre_pokemon, Peso INTO peso_maximo
+    FROM Pokemon
+    WHERE Region = region_pokemon
+    ORDER BY Peso DESC
+    LIMIT 1;
+    
+    RETURN CONCAT('El Pokémon más pesado de la región ', region_pokemon, ' es: ', nombre_pokemon, ' con un peso de ', peso_maximo, ' kg.');
+END //
+
+DELIMITER ;
+
+SELECT encontrar_pokemon_mas_pesado('Kanto');
